@@ -89,7 +89,7 @@ def img_grab(url, html_code, img_src_re, path):
   """
   try:
     img_src = re.search(img_src_re, html_code).group(1)
-    if img_src[0:1] == '//': img_src = ''.join(['http:', img_src])
+    if img_src[0:2] == '//': img_src = ''.join(['http:', img_src])
     elif img_src[0] == '/': img_src = ''.join([url, img_src])
     img_filename = img_src.split('/')[-1]
     urlretrieve(img_src, ''.join([path, img_filename]))
