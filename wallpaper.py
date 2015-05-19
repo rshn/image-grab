@@ -147,7 +147,7 @@ def main():
       )
   parser.add_argument('--source', default = 'ng', choices=['ng', 'xkcd', 'ag'], help = 'The source of the image/caption. Choose from ng, xkcd, or ag. The default is ng.')
   parser.add_argument('--mode', default = 'wallpaper', choices=['wallpaper', 'download_only', 'image_only'], help = 'Use to only download without setting the wallpaper, or to download only the image. Choose one or multiple of {wallpaper, download_only, image_only}. The default is wallpaper')
-  parser.add_argument('--path', default = '.', help = 'The folder that the image/text will be saved. The default is the current folder.')
+  parser.add_argument('--path', default = './', help = 'The folder that the image/text will be saved. The default is the current folder.')
   parsed = parser.parse_args(args_list)
   
   source = parsed.source
