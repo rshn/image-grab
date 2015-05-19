@@ -3,6 +3,8 @@ wallpaper.py
   This code changes your wallpapaer using National Geographic, xkcd, abtruse goose, ...
   and feh. It grabs the image and its meta information from these webpages and saves it in a path.
   It uses a dictionary of regular expressions to grab different things from a web page.
+  This dictionary is saved in the file config.json.
+  You can add any image source you want. Add url, check their html code and add the appropriate regular expressions and you are done.
 
 Usage:
   python wallpaper.py [--source ng/xkcd/ag] [--path path] [--mode wallpaper/download_only/image_only]
@@ -40,7 +42,8 @@ import argparse
 import json
 
 
-# load json file which store the configs for different source.
+# Loading a json file which stores the configs for different sources.
+# You only need to edit this file to add new image sources.
 with open('config.json') as json_data_file:
     args_dict = json.load(json_data_file)
 
