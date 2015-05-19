@@ -37,36 +37,12 @@ import HTMLParser
 import os
 import sys
 import argparse
+import json
 
-# To add another web page to download image from add another entry (key) below.
-# img_src_re is the regular expression which picks up the url to the image source.
-# Other regular expressions are to grab title, date, credit, and caption.
-args_dict = {
-    'ng':{
-      'url':'http://photography.nationalgeographic.com/photography/photo-of-the-day/',
-      'img_src_re':'<div class="primary_photo">.*?<img src="(.+?)".+?</div>',
-      'img_title_re':'<div id="caption">.+?<h2>(.+?)</h2>',
-      'img_date_re':'<div id="caption">.*?<p class="publication_time">(.+?)</p>',
-      'img_credit_re':'<p class="credit">(.+?)</p>',
-      'img_caption_re':'<div id="caption">.+?<p class="credit">.+?<p>(.+?)</p>'
-      },
-    'xkcd': {
-      'url':'https://xkcd.com/',
-      'img_src_re':'<div id="comic">.*?<img src="(.+?)"',
-      'img_title_re':'<div id="ctitle">(.+?)</div>',
-      'img_date_re':'<li><a rel="prev" href="(.+?)"',
-      'img_credit_re':'xkcd.com, (CC BY-NC 2.5)',
-      'img_caption_re':'<div id="comic">.*?title="(.+?)"'
-     },
-    'ag': {
-      'url':'http://abstrusegoose.com/',
-      'img_src_re':'<section>.+?<img src="(.+?)".+?</section>',
-      'img_title_re':'<h1 class="storytitle"><a href=".+?">(.+?)</a></h1>',
-      'img_date_re':'<h1 class="storytitle"><a href="http://abstrusegoose.com/(\d+?)">',
-      'img_credit_re':'abstrusegoose.com, (CC BY-NC 3.0)',
-      'img_caption_re':'<section>.+?<img src=.+?title="(.+?)".+?</section>'
-      }
-    }
+
+# load json file which store the configs for different source.
+with open('config.json') as json_data_file:
+    args_dict = json.load(json_data_file)
 
 def html_grab(url):
   """

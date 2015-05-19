@@ -1,0 +1,35 @@
+{
+    "ng":{
+      "url":"http://photography.nationalgeographic.com/photography/photo-of-the-day/",
+      "img_src_re":"<div class=\"primary_photo\">.*?<img src=\"(.+?)\".+?</div>",
+      "img_title_re":"<div id=\"caption\">.+?<h2>(.+?)</h2>",
+      "img_date_re":"<div id=\"caption\">.*?<p class=\"publication_time\">(.+?)</p>",
+      "img_credit_re":"<p class=\"credit\">(.+?)</p>",
+      "img_caption_re":"<div id=\"caption\">.+?<p class=\"credit\">.+?<p>(.+?)</p>"
+      },
+    "xkcd": {
+      "url":"https://xkcd.com/",
+      "img_src_re":"<div id=\"comic\">.*?<img src=\"(.+?)\"",
+      "img_title_re":"<div id=\"ctitle\">(.+?)</div>",
+      "img_date_re":"<li><a rel=\"prev\" href=\"(.+?)\"",
+      "img_credit_re":"xkcd.com, (CC BY-NC 2.5)",
+      "img_caption_re":"<div id=\"comic\">.*?title=\"(.+?)\""
+     },
+    "ag": {
+      "url":"http://abstrusegoose.com/",
+      "img_src_re":"<section>.+?<img src=\"(.+?)\".+?</section>",
+      "img_title_re":"<h1 class=\"storytitle\"><a href=\".+?\">(.+?)</a></h1>",
+      "img_date_re":"<h1 class=\"storytitle\"><a href=\"http://abstrusegoose.com/(\\d+?)\">",
+      "img_credit_re":"abstrusegoose.com, (CC BY-NC 3.0)",
+      "img_caption_re":"<section>.+?<img src=.+?title=\"(.+?)\".+?</section>"
+      },
+	"_comment": {
+	  "_comment_url":"url of the webpage where your image of interest lives",
+	  "_comment_img_src_re":"regular expression that extracts the src pointing to the image",
+	  "_comment_title_re":"regular expression that extracts the title of the image",
+	  "_comment_date_re":"regular expression that extracts the date of the image",
+	  "_comment_credit_re":"regular expression that extracts the credit of the image",
+	  "_comment_caption_re":"regular expression that extracts the caption of the image",
+	  "_comment_important_note":"when writing regular expression in json, don't forget to escape special characters. e.g. one backslash should be added to all backslashes."
+	  }
+}
