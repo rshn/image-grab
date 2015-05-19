@@ -7,7 +7,8 @@ The script uses a python dictionary which includes the regular expressions to gr
 <h4>How to use:</h4>
 Usage:<br>
 python wallpaper.py [--source web] [--path folder] [--mode mode]<br>
-python wallpaper.py --help
+python wallpaper.py --help<br>
+
 Args:<br>
   --source: web can be either one of ng, xkcd, or ag. ng stands for National Geographic photo of the day, xkcd is xkcd.com, and ag is the absrusegoose.com.<br>
   --path: folder is a folder in your computer you want to save the image and image information.<br>
