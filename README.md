@@ -15,5 +15,4 @@ Args:<br>
 
 <h4>Possible Extentions:</h4>
 + Add more image sources.
-- Make the dictionary args_dict a database file, like json, instead of a global dictionary variable. This is taken care of!
 + Make the grabber more sophisticated, using natural language processing, so one doesn't need regular expressions.
