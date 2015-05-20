@@ -74,7 +74,7 @@ def img_grab(url, html_code, img_src_re, path):
     urlretrieve(img_src, ''.join([path, img_filename]))
     print ''.join(['>> Image downloaded and saved at ', path, img_filename])
   except:
-    print ''.join(['>> This is not a correct regular expression: "', img_src_re, '"\nWas trying on this html:', url, '\nUnable to grab the image.'])
+    print ''.join(['>> This is not a correct regular expression: "', img_src_re, '"\nWas trying on this url: ', url, '\nUnable to grab the image.'])
 
   return img_filename
 
@@ -94,7 +94,7 @@ def txt_grab(url, html_code, img_meta_re, path, img_filename):
     try:
       img_meta.append(re.search(grab, html_code).group(1))
     except:
-      print ''.join(['>> This is not a correct regular expression: "', grab, '"\nWas trying on this html:', url,'\nInstead the regular expression text is copied.'])
+      print ''.join(['>> This is not a correct regular expression: "', grab, '"\nWas trying on this url: ', url,'\nInstead the regular expression text is copied.'])
       img_meta.append(grab)
 
   text = '\n'.join(img_meta)  
