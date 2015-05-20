@@ -7,11 +7,11 @@ wallpaper.py
   You can add any image source you want. Add url, check their html code and add the appropriate regular expressions and you are done.
 
 Usage:
-  python wallpaper.py [--source ng/xkcd/ag] [--path path] [--mode wallpaper/download_only/image_only]
+  python wallpaper.py [--source {ng,xkcd,ag}] [--path path] [--mode {wallpaper,download_only,image_only}]
 
-  --source argument is the key for the dictionary, i.e. which url and regular expressions ('/' means either one). Default is 'ng'.
-  --path argument is where the image and text files get saved. Default is '.'.
-  --mode argument decides on one of three modes, ('/' means either one)
+  --source argument is the key for the dictionary, i.e. which url and regular expressions. Default is 'ng'.
+  --path argument is where the image and text get saved. Default is '.'.
+  --mode argument decides on one of three modes,
     wallpaper: grab image and text and set the wallpaper,
     download_only: grab the image and text but do not set the wallpaper,
     image_only: just grab the image and be done.
@@ -125,7 +125,7 @@ def main():
       'Grabbing image and its description from online sources such as xkcd, abstrusegoose, National Geographic, and so on.'
       )
   parser.add_argument('--source', default = 'ng', choices=['ng', 'xkcd', 'ag'], help = 'The source of the image/caption. Choose from ng, xkcd, or ag. The default is ng.')
-  parser.add_argument('--mode', default = 'wallpaper', choices=['wallpaper', 'download_only', 'image_only'], help = 'Use to only download without setting the wallpaper, or to download only the image. Choose one or multiple of {wallpaper, download_only, image_only}. The default is wallpaper')
+  parser.add_argument('--mode', default = 'wallpaper', choices=['wallpaper', 'download_only', 'image_only'], help = 'Use to only download without setting the wallpaper, or to download only the image. Choose one of the options {wallpaper, download_only, image_only}. The default is wallpaper')
   parser.add_argument('--path', default = './', help = 'The folder that the image/text will be saved. The default is the current folder.')
   parsed = parser.parse_args(args_list)
   
