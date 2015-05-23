@@ -33,7 +33,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 """
 import re
-from urllib2 import urlopen
+import urllib2
 from urllib import urlretrieve
 import HTMLParser
 import os
@@ -52,9 +52,10 @@ def html_grab(url):
   Returns a string of html code, after stripping the '\n's.
   """
   try:
-    return urlopen(url, timeout = 2).read().replace('\n', '')
+    return urllib2.urlopen(url, timeout = 2).read().replace('\n', '')
   except urllib2.URLError:
     print ''.join(['Cannot access: ', url, '\nCheck your connection or change the timeout.'])
+    sys.exit(1)
 
 def img_grab(url, html_code, img_src_re, path):
   """
