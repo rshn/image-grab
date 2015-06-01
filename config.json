@@ -23,6 +23,14 @@
 		"img_credit_re":"abstrusegoose.com, (CC BY-NC 3.0)",
 		"img_caption_re":"<section>.+?<img src=.+?title=\"(.+?)\".+?</section>"
 	},
+	"nyr": {
+		"url":"http://www.newyorker.com/cartoons/daily-cartoon",
+		"img_src_re":"<meta itemprop=\"image\" content=\"(.+?)\".+?post-load",
+		"img_title_re":"<meta itemprop=\"image\" content=\".+?daily-cartoon-\\d+-([\\w-]+)-\\d+-\\d+-\\d+.+?\".+?post-load",
+		"img_date_re":"<meta itemprop=\"image\" content=\".+?daily-cartoon-(\\d+).+?\".+?post-load",
+		"img_credit_re":"post-load.+?<h3>By.+?title=\"(.+?)\" rel=\"author\"",
+		"img_caption_re":"<p class=\"p-summary\" itemprop=\"description\">\\xe2\\x80\\x9c(.+?)\\xe2\\x80\\x9d</p>"
+	},
 	"_comment": {
 		"_comment_url":"url of the webpage where your image of interest lives",
 		"_comment_img_src_re":"regular expression that extracts the src pointing to the image",
