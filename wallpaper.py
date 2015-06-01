@@ -1,6 +1,6 @@
 """
 wallpaper.py
-  This code changes your wallpapaer using National Geographic, xkcd, abtruse goose, New Yorker, ...,
+  This code changes your wallpapaer using National Geographic, xkcd, abtruse goose, The New Yorker, ...,
   and feh. It grabs the image and its meta information from these webpages and saves it in a path.
   It uses a dictionary of regular expressions to grab different things from a web page.
   This dictionary is saved in the file config.json.
@@ -123,7 +123,7 @@ def main():
   # --mode {wallpaper, download_only, image_only} option
   # --path {folder} option
   parser = argparse.ArgumentParser(description =
-      'Grabbing image and its description from online sources such as xkcd, abstrusegoose, National Geographic, New Yorker, and so on.'
+      'Grabbing image and its description from online sources such as xkcd, abstrusegoose, National Geographic, The New Yorker, and so on.'
       )
   parser.add_argument('--source', default = 'ng', choices=['ng', 'xkcd', 'ag', 'nyr'], help = 'The source of the image/caption. Choose from ng, xkcd, ag, or nyr. The default is ng.')
   parser.add_argument('--mode', default = 'wallpaper', choices=['wallpaper', 'download_only', 'image_only'], help = 'Use to only download without setting the wallpaper, or to download only the image. Choose one of the options {wallpaper, download_only, image_only}. The default is wallpaper')
