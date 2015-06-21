@@ -99,7 +99,10 @@ def txt_grab(url, html_code, img_meta_re, path, img_filename):
       img_meta.append(grab)
 
   text = '\n'.join(img_meta)  
-  text = HTMLParser.HTMLParser().unescape(text)
+  try:
+    text = HTMLParser.HTMLParser().unescape(text)
+  except:
+    print 'Text might have some issues!'
   txt_filename = ''.join([img_filename.split('.')[0], '.txt'])
   f = open(''.join([path, txt_filename]), 'w')
   f.write(text)
