@@ -26,8 +26,8 @@
 	"nyr": {
 		"url":"http://www.newyorker.com/cartoons/daily-cartoon",
 		"img_src_re":"<meta itemprop=\"image\" content=\"(.+?)\".+?post-load",
-		"img_title_re":"<meta itemprop=\"image\" content=\".+?daily-cartoon(?:-|_)\\d+(?:-|_)([\\w-]+)(?:-|_)\\d+(?:-|_)\\d+(?:-|_)\\d+.+?\".+?post-load",
-		"img_date_re":"<meta itemprop=\"image\" content=\".+?daily-cartoon-(\\d+).+?\".+?post-load",
+		"img_title_re":"<meta itemprop=\"image\" content=\".+?daily-cartoon(?:-|_|)\\d+(?:-|_|)([\\w-]+?)(?:-|_|)\\d+(?:-|_|)\\d+(?:-|_|)\\d+.+?\".+?post-load",
+		"img_date_re":"<meta itemprop=\"image\" content=\".+?daily-cartoon(?:-|_|)(\\d+).+?\".+?post-load",
 		"img_credit_re":"post-load.+?<h3>By.+?title=\"(.+?)\" rel=\"author\"",
 		"img_caption_re":"<p class=\"p-summary\" itemprop=\"description\">\\xe2\\x80\\x9c(.+?)(?:\\xe2\\x80\\x9d|&hellip;)</p>"
 	},
