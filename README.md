@@ -1,5 +1,5 @@
 # image-grab
-The script uses a python dictionary which includes the regular expressions to grab the image and the image information from a url. Now there is only one python file, wallpaper.py, and the database contains three sources.
+The script uses a python dictionary which includes the regular expressions to grab the image and the image information from a url. Now there is only one python file, wallpaper.py, and the database contains these sources:
 + http://photography.nationalgeographic.com/photography/photo-of-the-day/
 + http://xkcd.com/
 + http://abstrusegoose.com/
