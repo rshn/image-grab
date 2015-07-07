@@ -37,7 +37,7 @@
 		"img_title_re":"<li><a class=\"reddit\" href=\".+?&amp;title=(.+?)\" title=\"reddit\"",
 		"img_date_re":"<img class=\".+?wp-image-(\\d+)\".+?src=\"",
 		"img_credit_re":"poorlydrawnlines.com by Reza Farazmand, (CC BY-NC 3.0)",
-		"img_caption_re":"<p><img class=\".+?alt=\"(.+?).+?/></p>"
+		"img_caption_re":"<p><img class=\".+?alt=\"(.+?)\".+?/></p>"
 	},
 	"_comment": {
 		"_comment_url":"url of the webpage where your image of interest lives",
