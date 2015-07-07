@@ -128,7 +128,7 @@ def main():
   parser = argparse.ArgumentParser(description =
       'Grabbing image and its description from online sources such as xkcd, abstrusegoose, National Geographic, The New Yorker, and so on.'
       )
-  parser.add_argument('--source', default = 'ng', choices=['ng', 'xkcd', 'ag', 'nyr'], help = 'The source of the image/caption. Choose from ng, xkcd, ag, or nyr. The default is ng.')
+  parser.add_argument('--source', default = 'ng', choices=['ng', 'xkcd', 'ag', 'nyr', 'pdl'], help = 'The source of the image/caption. Choose from ng, xkcd, ag, or nyr. The default is ng.')
   parser.add_argument('--mode', default = 'wallpaper', choices=['wallpaper', 'download_only', 'image_only'], help = 'Use to only download without setting the wallpaper, or to download only the image. Choose one of the options {wallpaper, download_only, image_only}. The default is wallpaper')
   parser.add_argument('--path', default = './', help = 'The folder that the image/text will be saved. The default is the current folder.')
   parsed = parser.parse_args(args_list)
