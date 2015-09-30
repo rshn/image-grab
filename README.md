@@ -1,5 +1,5 @@
 # image-grab
-The script uses a python dictionary which includes the regular expressions to grab the image and the image information from a url. Now there is only one python file, wallpaper.py, and the database contains these sources:
+The script uses a json file which includes the regular expressions to grab the image and the image information from some urls. The config.json contains these sources:
 + http://photography.nationalgeographic.com/photography/photo-of-the-day/
 + http://xkcd.com/
 + http://abstrusegoose.com/
@@ -7,6 +7,7 @@ The script uses a python dictionary which includes the regular expressions to gr
 + http://poorlydrawnlines.com/
 
 <h4>How to use:</h4>
+You need to have the wallpaper.py and config.json at the same path.
 Usage:<br>
 python wallpaper.py [--source web] [--path folder] [--mode mode]<br>
 python wallpaper.py --help<br>
