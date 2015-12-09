@@ -5,7 +5,7 @@
 		"img_title_re":"<div id=\"caption\">.+?<h2>(.+?)</h2>",
 		"img_date_re":"<div id=\"caption\">.*?<p class=\"publication_time\">(.+?)</p>",
 		"img_credit_re":"<p class=\"credit\">(.+?)</p>",
-		"img_caption_re":"<div id=\"caption\">.+?<p class=\"credit\">.+?<p>(.+?)</p>"
+		"img_caption_re":"<div id=\"caption\">.+?<p dir=\"ltr\">(.+?)</p>"
 	},
 	"xkcd": {
 		"url":"https://xkcd.com/",
